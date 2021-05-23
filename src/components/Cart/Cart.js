@@ -1,7 +1,7 @@
 import React from 'react';
 import './Cart.scss';
 
-const Cart = ({ cartItems }) => {
+const Cart = ({ cartItems, removeFromCart }) => {
     return (
         <div className="cart">
             <div className="cart__items">
@@ -23,7 +23,7 @@ const Cart = ({ cartItems }) => {
                                 <p className="cart__title">{item.title}</p>
                                 <div className="cart__bottom">
                                     <p className="cart__title">{item.count} x ${item.price}</p>
-                                    <button className="cart__remove" onClick={()=>this.props.removeFromCart(item)}>Remove</button>
+                                    <button className="cart__remove" onClick={()=> removeFromCart(item)}>Remove</button>
                                 </div>
                             </div>
                         </li>
