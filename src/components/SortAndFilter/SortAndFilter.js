@@ -3,12 +3,13 @@ import './SortAndFilter.scss';
 
 class SortAndFilter extends Component {
     render() {
+        const { count, sort, category, filterProducts, sortProducts } = this.props;
         return (
             <div className="sort-filter">
-                <p className="sort-filter__count">{this.props.count} Jewelries</p>
+                <p className="sort-filter__count">{count} Jewelries</p>
                 <div className="sort-filter__sort">
                     <p className="sort-filter__title">Sort By Price</p>
-                    <select>
+                    <select value={sort} onChange={sortProducts}>
                         <option>Default</option>
                         <option value="highest">Highest</option>
                         <option value="lowest">Lowest</option>
@@ -16,7 +17,7 @@ class SortAndFilter extends Component {
                 </div>
                 <div className="sort-filter__filter">
                     <p className="sort-filter__title">Filters</p>
-                    <select>
+                    <select value={category} onChange={filterProducts}>
                         <option>All</option>
                         <option value="earrings">Earrings</option>
                         <option value="rings">Rings</option>

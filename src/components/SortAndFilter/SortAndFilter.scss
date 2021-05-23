@@ -1,0 +1,12 @@
+.sort-filter{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    border-bottom: 0.1rem solid #fde6ad;
+    &__sort{
+        display: flex;
+    }
+    &__filter{
+        display: flex;
+    }
+}

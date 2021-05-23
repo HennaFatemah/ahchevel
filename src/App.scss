@@ -42,6 +42,7 @@
     }
     &__products{
         display: flex;
+        flex-direction: column;
         flex: 3 60rem;
     }
     &__cart{

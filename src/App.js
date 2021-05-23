@@ -10,10 +10,33 @@ class App extends Component {
     super()
     this.state = {
       products: data.products,
-      size: '',
+      category: '',
       sort: '',
     }
   }
+
+  sortProducts = (e) => {
+    const sort = e.target.value;
+    this.setState({
+      sort: sort,
+      products: Array
+        .from(this.state.products)
+        .sort((a, b) => 
+          sort === 'lowest' ?
+            a.price - b.price :
+          sort === 'highest' ?
+            b.price - a.price :
+          a.id - b.id
+        )
+    })
+  }
+
+  filterProducts = (e) => {
+    this.setState({
+      category: e.target.value,
+    })
+  }
+
   render() {
     return (
       <div className="grid-container">
@@ -25,6 +48,10 @@ class App extends Component {
             <div className="grid-container__products">
               <SortAndFilter
                 count={this.state.products.length}
+                sort={this.state.sort}
+                category={this.state.category}
+                filterProducts={this.filterProducts}
+                sortProducts={this.sortProducts}
               />
               <Products
                 products={this.state.products}
