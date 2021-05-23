@@ -1,7 +1,7 @@
 {
     "products" : [
         {
-            "id": "jewellery1",
+            "id": 1,
             "title": "Chandelier Droppings",
             "category": "earrings",
             "image": "/images/chandelierDroppings/chandelierMain.jpeg",
@@ -13,7 +13,7 @@
 
         },
         {
-            "id": "jewellery2",
+            "id": 2,
             "title": "Tears Of Eve",
             "category": "rings",
             "image": "/images/tears-of-eve/tears-of-eve-main.png",
@@ -24,7 +24,7 @@
             "price": 30
         },
         {
-            "id": "jewellery3",
+            "id": 3,
             "title": "Princess Of The Evening",
             "category": "bracelet",
             "image": "/images/princessOfTheEvening/princessOfTheEveningMain.jpeg",
@@ -36,7 +36,7 @@
 
         },
         {
-            "id": "jewellery4",
+            "id": 4,
             "title": "Victorian Affair Set",
             "category": "sets",
             "image": "/images/victorianAffairSet/victorianAffairSetMain.jpeg",
@@ -48,7 +48,7 @@
 
         },
         {
-            "id": "jewellery5",
+            "id": 5,
             "title": "Truck Art Chandelier",
             "category": "earrings",
             "image": "/images/truckArtChandelier/truckArtChandelierMain.jpg",
@@ -60,7 +60,7 @@
 
         },
         {
-            "id": "jewellery6",
+            "id": 6,
             "title": "Floral Grandeur Earrings",
             "category": "earrings",
             "image": "/images/floralGrandeur/floralGrandeurMain.jpg",

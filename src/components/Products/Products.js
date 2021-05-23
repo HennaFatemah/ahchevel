@@ -5,8 +5,9 @@ class Products extends Component {
     render() {
         const { products } = this.props;
         return (
-            <>
-                <ul className="products">
+            <div className="products">
+                <h2 className="products__heading">Jewelry</h2>
+                <ul className="products__main">
                     {products.map(product => {
                         return(
                             <li className="products__card" key={product._id}>
@@ -26,7 +27,7 @@ class Products extends Component {
                         )
                     })}
                 </ul>
-            </>
+            </div>
         );
     }
 }
