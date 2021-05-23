@@ -4,6 +4,7 @@ import './App.scss';
 import data from './data.json';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
+import Cart from './components/Cart/Cart';
 
 class App extends Component {
   constructor(){
@@ -17,17 +18,18 @@ class App extends Component {
   }
 
   addToCart = (product) => {
-    const cartItems = [...this.state.cartItems];
+    const cartItems = Array.from(this.state.cartItems);
     let alreadyInCart = false;
     cartItems.forEach(item => {
       if(item.id === product.id) {
         item.count++;
         alreadyInCart = true;
       }
-      if(!alreadyInCart){
-        cartItems.push({ ...product, count: 1})
-      }
     });
+    if(!alreadyInCart){
+      cartItems.push({ ...product, count: 1})
+    }
+    this.setState({ cartItems });
   }
 
   sortProducts = (e) => {
@@ -80,9 +82,14 @@ class App extends Component {
               />
               <Products
                 products={this.state.products}
+                addToCart={this.addToCart} 
               />
             </div>
-            <div className="grid-container__cart">Cart Items</div>
+            <div className="grid-container__cart">
+              <Cart
+                cartItems={this.state.cartItems}
+              />
+            </div>
           </div>
         </div>
         <div className="grid-container__foot">

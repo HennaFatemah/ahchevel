@@ -1,0 +1,60 @@
+.cart{
+    display: flex;
+    flex-direction: column;
+    //justify-content: center;
+    width: 100%;
+    margin: 0 2rem;
+    &__head{
+        padding: 2.1rem 1rem;
+        display: flex;
+        align-items: center;
+        border-bottom: 0.1rem solid #fde6ad;
+        color: rgb(165, 125, 25);
+    }
+    &__items{
+        padding: 0;
+        width: 100%;
+        list-style: none;
+    }
+    &__pic{
+        width: 7rem;
+        border: solid 1px #0000003b;
+        border-radius: 4px;
+    }
+    &__title{
+        color: rgb(165, 125, 25);
+    }
+    &__card{
+        display: flex;
+        align-items: center;
+        box-shadow: -1px 1px 5px #0000003b;
+        border-radius: 6px;
+        margin: 0.5rem;
+        padding: 1rem;
+    }
+    &__right{
+        padding: 0 0.5rem;
+        width: 100%;
+    }
+    &__bottom{
+        display: flex;
+        justify-content: space-between;
+    }
+    &__remove{
+        height: fit-content;
+        border: 0.1rem solid #daa520;
+        background-color: transparent;
+        color: #daa520;
+        padding: 1rem 2rem;
+        border-radius: 3px;
+        cursor: grab;
+        font-size: 1.6rem;
+        &:hover{
+            background-color: #daa520;
+            color: #fff;
+        }
+        &:active{
+            cursor: grabbing;
+        }
+    }
+}

@@ -6,7 +6,6 @@ class Products extends Component {
         const { products, addToCart } = this.props;
         return (
             <div className="products">
-                <h2 className="products__heading">Jewelry</h2>
                 <ul className="products__main">
                     {products.map(product => {
                         return(
