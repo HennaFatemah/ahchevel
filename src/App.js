@@ -4,6 +4,14 @@ import './App.scss';
 import data from './data.json';
 
 class App extends Component {
+  constructor(){
+    super()
+    this.state = {
+      products: data.products,
+      size: '',
+      sort: '',
+    }
+  }
   render() {
     return (
       <div className="grid-container">
@@ -11,7 +19,10 @@ class App extends Component {
           <button className="grid-container__logo"><img className="grid-container__logo-pic" src={Logo} alt="" /></button>
         </div>
         <div className="grid-container__main">
-          Jewelry List
+          <div className="grid-container__content">
+            <div className="grid-container__products">Products</div>
+            <div className="grid-container__cart">Cart Items</div>
+          </div>
         </div>
         <div className="grid-container__foot">
           All Right Is Reserved
