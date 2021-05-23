@@ -1,0 +1,52 @@
+.products{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    &__card{
+        flex: 0 1 29rem;
+        height: 47rem;
+        padding: 1rem;
+    }
+    &__card-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        height: 100%;
+    }
+    &__pic{
+        max-width: 37rem;
+        max-height: 37rem;
+    }
+    &__card-details{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    &__price{
+        text-align: center;
+        flex: 1;
+        font-size: 2rem;
+    }
+    &__cart-add{
+        text-align: center;
+        flex: 1;
+        border: 0.1rem solid #daa520;
+        background-color: transparent;
+        color: #daa520;
+        padding: 1rem;
+        border-radius: 3px;
+        cursor: grab;
+        font-size: 1.6rem;
+        &:hover{
+            background-color: #daa520;
+            color: #fff;
+        }
+        &:active{
+            cursor: grabbing;
+        }
+    }
+}

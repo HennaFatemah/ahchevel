@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Logo from './assets/logo/logo.png';
 import './App.scss';
 import data from './data.json';
+import Products from './components/Products/Products';
 
 class App extends Component {
   constructor(){
@@ -20,7 +21,11 @@ class App extends Component {
         </div>
         <div className="grid-container__main">
           <div className="grid-container__content">
-            <div className="grid-container__products">Products</div>
+            <div className="grid-container__products">Products
+              <Products
+                products={this.state.products}
+              />
+            </div>
             <div className="grid-container__cart">Cart Items</div>
           </div>
         </div>
