@@ -6,10 +6,14 @@ class SortAndFilter extends Component {
         const { count, sort, category, filterProducts, sortProducts } = this.props;
         return (
             <div className="sort-filter">
-                <p className="sort-filter__count">{count} Jewelries</p>
+                <p className="sort-filter__title">{count} Jewelries</p>
                 <div className="sort-filter__sort">
                     <p className="sort-filter__title">Sort By Price</p>
-                    <select value={sort} onChange={sortProducts}>
+                    <select 
+                        value={sort} 
+                        onChange={sortProducts}
+                        className="sort-filter__select"
+                    >
                         <option>Default</option>
                         <option value="highest">Highest</option>
                         <option value="lowest">Lowest</option>
@@ -17,8 +21,12 @@ class SortAndFilter extends Component {
                 </div>
                 <div className="sort-filter__filter">
                     <p className="sort-filter__title">Filters</p>
-                    <select value={category} onChange={filterProducts}>
-                        <option value= "">All</option>
+                    <select 
+                        value={category} 
+                        onChange={filterProducts}
+                        className="sort-filter__select"
+                    >
+                        <option value="">All</option>
                         <option value="earrings">Earrings</option>
                         <option value="rings">Rings</option>
                         <option value="bracelet">Bracelets</option>
