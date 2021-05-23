@@ -9,7 +9,7 @@ class Products extends Component {
                 <ul className="products__main">
                     {products.map(product => {
                         return(
-                            <li className="products__card" key={product._id}>
+                            <li className="products__card" key={product.id}>
                                 <div className="products__card-container">
                                     <div className="products__card-link">
                                         <img className="products__pic" src={product.image} alt={product.title} />

@@ -40,7 +40,7 @@
         display: flex;
         justify-content: space-between;
     }
-    &__remove{
+    &__btn{
         height: fit-content;
         border: 0.1rem solid #daa520;
         background-color: transparent;
@@ -56,5 +56,13 @@
         &:active{
             cursor: grabbing;
         }
+    }
+    &__calc{
+        color: rgb(165, 125, 25);
+    }
+    &__total{
+        display: flex;
+        justify-content: space-between;
+        margin: 0 1rem;
     }
 }

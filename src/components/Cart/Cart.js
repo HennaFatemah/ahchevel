@@ -23,13 +23,20 @@ const Cart = ({ cartItems, removeFromCart }) => {
                                 <p className="cart__title">{item.title}</p>
                                 <div className="cart__bottom">
                                     <p className="cart__title">{item.count} x ${item.price}</p>
-                                    <button className="cart__remove" onClick={()=> removeFromCart(item)}>Remove</button>
+                                    <button className="cart__btn" onClick={()=> removeFromCart(item)}>Remove</button>
                                 </div>
                             </div>
                         </li>
                     )
                 })}
             </ul>
+            {cartItems.length !== 0 && 
+                <div className="cart__total">
+                    <p className="cart__calc">Total: ${cartItems.reduce((a, b)=> a + b.price * b.count, 0)}</p>
+                    <button className="cart__btn">Proceed</button>
+                </div>
+            }
+            
         </div>
     );
 };
