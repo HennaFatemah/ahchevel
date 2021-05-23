@@ -1,0 +1,75 @@
+{
+    "products" : [
+        {
+            "id": "jewellery1",
+            "title": "Chandelier Droppings",
+            "category": "earrings",
+            "image": "/images/chandelierDroppings/chandelierMain.jpeg",
+            "imageOne": "/images/chandelierDroppings/chandelierOne.jpg",
+            "imageTwo": "/images/chandelierDroppings/chandelierTwo.jpg",
+            "imageThree": "/images/chandelierDroppings/chandelierThree.jpg",
+            "description": "925 Sterling Silver Earrings with studded zircons to make you stand out from the crowd!",
+            "price": 80
+
+        },
+        {
+            "id": "jewellery2",
+            "title": "Tears Of Eve",
+            "category": "rings",
+            "image": "/images/tears-of-eve/tears-of-eve-main.png",
+            "imageOne": "/images/tears-of-eve/tears-of-eve-one.jpg",
+            "imageTwo": "/images/tears-of-eve/tears-of-eve-two.jpg",
+            "imageThree": "/images/tears-of-eve/tears-of-eve-three.jpg",
+            "description": "925 Sterling Silver Ring. Grab the beautiful “Tears of Eve” ring to get the right look! The ring represents Tears of Eve when banished from Eden.",
+            "price": 30
+        },
+        {
+            "id": "jewellery3",
+            "title": "Princess Of The Evening",
+            "category": "bracelet",
+            "image": "/images/princessOfTheEvening/princessOfTheEveningMain.jpeg",
+            "imageOne": "/images/princessOfTheEvening/princessOfTheEveningOne.jpg",
+            "imageTwo": "/images/princessOfTheEvening/princessOfTheEveningTwo.jpg",
+            "imageThree": "/images/princessOfTheEvening/princessOfTheEveningThree.jpg",
+            "description": "925 Sterling Silver bracelet. Be the “Princess of the evening” with our perfect princess dreams bracelet! With princess cut amethyst crystals along with round cut fine zircons this is sure to make you feel elated!",
+            "price": 120
+
+        },
+        {
+            "id": "jewellery4",
+            "title": "Victorian Affair Set",
+            "category": "sets",
+            "image": "/images/victorianAffairSet/victorianAffairSetMain.jpeg",
+            "imageOne": "/images/victorianAffairSet/victorianAffairSetOne.jpg",
+            "imageTwo": "/images/victorianAffairSet/victorianAffairSetTwo.jpg",
+            "imageThree": "/images/victorianAffairSet/victorianAffairSetThree.jpg",
+            "description": "Victorian affair set speaks volume about our attention to intricacy. We truly believe in creating something which not only appeals to the eye but is also stylish and delicate. Made in 925 sterling silver with rhodium plating.",
+            "price": 80
+
+        },
+        {
+            "id": "jewellery5",
+            "title": "Truck Art Chandelier",
+            "category": "earrings",
+            "image": "/images/truckArtChandelier/truckArtChandelierMain.jpg",
+            "imageOne": "/images/truckArtChandelier/truckArtChandelierOne.jpg",
+            "imageTwo": "/images/truckArtChandelier/truckArtChandelierTwo.jpg",
+            "imageThree": "/images/truckArtChandelier/truckArtChandelierThree.jpg",
+            "description": "It’s all about embracing yourself for the new beginnings. Be it the new season or some other change in life. Our Truck Art chandelier earrings features handwork painted and signed by the famous artist Phoolji. It is made in 925 sterling silver with 22K Gold Plating. Just about right to add something new to your collection!",
+            "price": 150
+
+        },
+        {
+            "id": "jewellery6",
+            "title": "Floral Grandeur Earrings",
+            "category": "earrings",
+            "image": "/images/floralGrandeur/floralGrandeurMain.jpg",
+            "imageOne": "/images/floralGrandeur/floralGrandeurOne.jpg",
+            "imageTwo": "/images/floralGrandeur/floralGrandeurTwo.jpg",
+            "imageThree": "/images/floralGrandeur/floralGrandeurThree.jpg",
+            "description": "Berber inspired set is a fusion of modernism and Moroccan Berber symbolism. The beautiful garnet gemstone crystal with zircon crystal made in 925 sterling silver with rhodium plating, makes it attractive. Get your hands on this beauty now!",
+            "price": 105
+
+        }
+    ]
+}

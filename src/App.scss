@@ -36,4 +36,16 @@
         justify-content: center;
         align-items: center;
     }
+    &__content{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__products{
+        display: flex;
+        flex: 3 60rem;
+    }
+    &__cart{
+        display: flex;
+        flex: 1 20rem;
+    }
 }
