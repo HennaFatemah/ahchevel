@@ -1,8 +1,9 @@
 .sort-filter{
     display: flex;
     justify-content: space-between;
-    padding: 1rem;
+    padding: 2rem 1rem;
     border-bottom: 0.1rem solid #fde6ad;
+    margin-left: 2rem;
     &__sort{
         display: flex;
     }

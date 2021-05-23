@@ -3,14 +3,13 @@ import './Products.scss';
 
 class Products extends Component {
     render() {
-        const { products } = this.props;
+        const { products, addToCart } = this.props;
         return (
             <div className="products">
-                <h2 className="products__heading">Jewelry</h2>
                 <ul className="products__main">
                     {products.map(product => {
                         return(
-                            <li className="products__card" key={product._id}>
+                            <li className="products__card" key={product.id}>
                                 <div className="products__card-container">
                                     <div className="products__card-link">
                                         <img className="products__pic" src={product.image} alt={product.title} />
@@ -20,7 +19,10 @@ class Products extends Component {
                                     </div>
                                     <div className="products__card-details">
                                         <p className="products__price">${product.price}</p>
-                                        <button className="products__cart-add">Add To Cart</button>
+                                        <button
+                                            className="products__cart-add"
+                                            onClick={()=> addToCart(product)}
+                                        >Add To Cart</button>
                                     </div>
                                 </div>
                             </li>
