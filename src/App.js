@@ -32,9 +32,19 @@ class App extends Component {
   }
 
   filterProducts = (e) => {
-    this.setState({
-      category: e.target.value,
-    })
+    const category = e.target.value;
+    this.setState(
+      category.length > 0 ?
+      {
+        category: category,
+        products: data.products.filter(filteredProducts => filteredProducts.category === category)
+      }
+      :
+      {
+        category: category,
+        products: data.products
+      }
+    )
   }
 
   render() {

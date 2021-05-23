@@ -18,10 +18,10 @@ class SortAndFilter extends Component {
                 <div className="sort-filter__filter">
                     <p className="sort-filter__title">Filters</p>
                     <select value={category} onChange={filterProducts}>
-                        <option>All</option>
+                        <option value= "">All</option>
                         <option value="earrings">Earrings</option>
                         <option value="rings">Rings</option>
-                        <option value="bracelets">Bracelets</option>
+                        <option value="bracelet">Bracelets</option>
                         <option value="sets">Sets</option>
                     </select>
                 </div>
