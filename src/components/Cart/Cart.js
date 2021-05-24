@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
+import { Fade } from "react-awesome-reveal";
 import './Cart.scss';
 
 class Cart extends Component {
@@ -52,24 +53,26 @@ class Cart extends Component {
                         <div className="cart__head">You have {cartItems.length} items in the cart</div>
                     }
                 </div>
-                <ul className="cart__items">
-                    {cartItems.map(item => {
-                        return(
-                            <li className="cart__card" key={item.id}>
-                                <div className="cart__left">
-                                    <img className="cart__pic" src={item.image} alt={item.title} />
-                                </div>
-                                <div className="cart__right">
-                                    <p className="cart__title">{item.title}</p>
-                                    <div className="cart__bottom">
-                                        <p className="cart__title">{item.count} x ${item.price}</p>
-                                        <button className="cart__btn" onClick={()=> removeFromCart(item)}>Remove</button>
+                <Fade direction="left">
+                    <ul className="cart__items">
+                        {cartItems.map(item => {
+                            return(
+                                <li className="cart__card" key={item.id}>
+                                    <div className="cart__left">
+                                        <img className="cart__pic" src={item.image} alt={item.title} />
                                     </div>
-                                </div>
-                            </li>
-                        )
-                    })}
-                </ul>
+                                    <div className="cart__right">
+                                        <p className="cart__title">{item.title}</p>
+                                        <div className="cart__bottom">
+                                            <p className="cart__title">{item.count} x ${item.price}</p>
+                                            <button className="cart__btn" onClick={()=> removeFromCart(item)}>Remove</button>
+                                        </div>
+                                    </div>
+                                </li>
+                            )
+                        })}
+                    </ul>
+                </Fade>
                 {cartItems.length !== 0 && 
                     <div className="cart__total">
                         <p className="cart__calc">Total: ${cartItems.reduce((a, b)=> a + b.price * b.count, 0)}</p>
