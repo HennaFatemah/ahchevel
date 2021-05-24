@@ -1,7 +1,7 @@
 .cart{
+    position: fixed;
     display: flex;
     flex-direction: column;
-    //justify-content: center;
     width: 100%;
     margin: 0 2rem;
     &__head{
@@ -10,10 +10,11 @@
         align-items: center;
         border-bottom: 0.1rem solid #fde6ad;
         color: rgb(165, 125, 25);
+        flex-wrap: wrap;
+        font-size: 1.3rem;
     }
     &__items{
         padding: 0;
-        width: 100%;
         list-style: none;
     }
     &__pic{
@@ -23,14 +24,15 @@
     }
     &__title{
         color: rgb(165, 125, 25);
+        font-size: 1.3rem;
     }
     &__card{
         display: flex;
         align-items: center;
         box-shadow: -1px 1px 5px #0000003b;
         border-radius: 6px;
-        margin: 0.5rem;
         padding: 1rem;
+        width: 25%;
     }
     &__right{
         padding: 0 0.5rem;
@@ -39,6 +41,7 @@
     &__bottom{
         display: flex;
         justify-content: space-between;
+        flex-wrap: wrap;
     }
     &__btn{
         height: fit-content;
@@ -49,6 +52,7 @@
         border-radius: 3px;
         cursor: grab;
         font-size: 1.6rem;
+        margin: 1rem;
         &:hover{
             background-color: #daa520;
             color: #fff;
@@ -64,5 +68,6 @@
         display: flex;
         justify-content: space-between;
         margin: 0 2rem;
+        width: 25%;
     }
 }

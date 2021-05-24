@@ -6,7 +6,7 @@ class SortAndFilter extends Component {
         const { count, sort, category, filterProducts, sortProducts } = this.props;
         return (
             <div className="sort-filter">
-                <p className="sort-filter__title">{count} Jewelries</p>
+                <p className="sort-filter__title sort-filter__title--count">{count} Jewelries</p>
                 <div className="sort-filter__sort">
                     <p className="sort-filter__title">Sort By Price</p>
                     <select 

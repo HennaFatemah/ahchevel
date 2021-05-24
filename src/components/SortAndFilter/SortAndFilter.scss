@@ -6,14 +6,21 @@
     margin-left: 2rem;
     &__sort{
         display: flex;
+        width: 20rem;
+        justify-content: flex-end;
     }
     &__filter{
         display: flex;
+        width: 20rem;
+        justify-content: flex-end;
     }
     &__title{
         margin: 0;
         color: rgb(165, 125, 25);
         padding: 0 1rem;
+        &--count{
+            width: 10rem;
+        }
     }
     &__select{
         appearance: none;

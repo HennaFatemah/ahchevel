@@ -15,12 +15,12 @@ const ProductDetails = ({ product, addToCart, closeWindow }) => {
                     imageThree = {product.imageThree}
                 />
                 <div className="details__contents">
-                    <p className="details__text">{product.title}</p>
+                    <p className="details__text details__text--title">{product.title}</p>
                     <p className="details__text">Category: "{product.category.charAt(0).toUpperCase() + product.category.slice(1)}"</p>
                     <p className="details__text">{product.description}</p>
-                    <p className="details__text">${product.price}</p>
+                    <p className="details__text details__text--price">${product.price}</p>
                     <button
-                        className="details__btn"
+                        className="details__btn details__btn--add"
                         onClick={()=>{
                         addToCart(product)
                         closeWindow()
