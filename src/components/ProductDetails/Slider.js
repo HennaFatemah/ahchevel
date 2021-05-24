@@ -5,6 +5,7 @@ import "./Slider.scss";
 import SlideOne from './Slides/SlideOne/SlideOne';
 import SlideTwo from './Slides/SlideTwo/SlideTwo';
 import SlideThree from './Slides/SlideThree/SlideThree';
+import SlideFour from './Slides/SlideFour/SlideFour';
 import Left from '../../assets/icons/left-arrow.svg';
 import Right from '../../assets/icons/right.svg';
 
@@ -42,6 +43,11 @@ class Slider extends Component {
                         <Item>
                             <SlideThree
                                 imageTwo = {this.props.imageTwo}
+                            />
+                        </Item>
+                        <Item>
+                            <SlideFour
+                                imageThree = {this.props.imageThree}
                             />
                         </Item>
                     </Carousel>

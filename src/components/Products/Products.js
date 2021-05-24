@@ -48,6 +48,8 @@ class Products extends Component {
                 {this.state.product && 
                     <ProductDetails
                         product={this.state.product}
+                        addToCart={addToCart}
+                        closeWindow={this.closeWindow}
                     />
                 }
             </div>
