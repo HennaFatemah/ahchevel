@@ -1,0 +1,48 @@
+.checkout{
+    border-top: goldenrod solid 1px;
+    margin: 0 2rem;
+    &__form{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+    &__list{
+        width: 100%;
+        padding: 0;
+        list-style: none;
+    }
+    &__items{
+        display: flex;
+        flex-direction: column;
+    }
+    &__insert{
+        padding: 1rem;
+        color: goldenrod;
+        border: goldenrod solid 1px;
+        border-radius: 4px;
+        outline: none;
+    }
+    &__tag{
+        color: goldenrod;
+        margin: 1rem 0;
+    }
+    &__btn{
+        align-self: flex-end;
+        height: fit-content;
+        border: 0.1rem solid #daa520;
+        background-color: transparent;
+        color: #daa520;
+        padding: 1rem 2rem;
+        border-radius: 3px;
+        cursor: grab;
+        font-size: 1.6rem;
+        &:hover{
+            background-color: #daa520;
+            color: #fff;
+        }
+        &:active{
+            cursor: grabbing;
+        }
+    }
+}
