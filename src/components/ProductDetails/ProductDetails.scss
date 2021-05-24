@@ -1,0 +1,23 @@
+.details {
+    position: fixed;
+    top: 0;
+    background-color: rgba(128, 128, 128, 0.513);
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__window{
+        background: radial-gradient(#e6b964,#fada9e, white, white);
+        background-size: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        width: 80%;
+        height: fit-content;
+    }
+    &__part{
+        width: 60vw;
+    }
+}
