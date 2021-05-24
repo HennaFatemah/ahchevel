@@ -1,7 +1,23 @@
 import React, { Component } from 'react';
+import ProductDetails from '../ProductDetails/ProductDetails';
 import './Products.scss';
 
 class Products extends Component {
+    constructor(props){
+        super(props);
+        this.state = {
+            product: null
+        }
+    }
+
+    openWindow = (product) =>{
+        this.setState({product})
+    }
+
+    closeWindow = () => {
+        this.setState({product: null})
+    }
+
     render() {
         const { products, addToCart } = this.props;
         return (
@@ -11,7 +27,7 @@ class Products extends Component {
                         return(
                             <li className="products__card" key={product.id}>
                                 <div className="products__card-container">
-                                    <div className="products__card-link">
+                                    <div  onClick={() => this.openWindow(product)} className="products__card-link">
                                         <img className="products__pic" src={product.image} alt={product.title} />
                                         <p className="products__title">
                                             {product.title}
@@ -29,6 +45,13 @@ class Products extends Component {
                         )
                     })}
                 </ul>
+                {this.state.product && 
+                    <ProductDetails
+                        product={this.state.product}
+                        addToCart={addToCart}
+                        closeWindow={this.closeWindow}
+                    />
+                }
             </div>
         );
     }

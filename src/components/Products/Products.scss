@@ -21,6 +21,9 @@
             box-shadow: -3px 3px 15px #0000003b;
         }
     }
+    &__card-link{
+        cursor: pointer;
+    }
     &__card-container{
         display: flex;
         flex-direction: column;
