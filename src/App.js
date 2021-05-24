@@ -17,6 +17,10 @@ class App extends Component {
     }
   }
 
+  createOrder = (order) => {
+    alert("Need to save order for" + order.name)
+  }
+
   removeFromCart = (product) => {
     const cartItems = Array.from(this.state.cartItems);
     this.setState(
@@ -96,6 +100,7 @@ class App extends Component {
               <Cart
                 cartItems={this.state.cartItems}
                 removeFromCart={this.removeFromCart}
+                createOrder={this.createOrder}
               />
             </div>
           </div>
