@@ -8,39 +8,6 @@ import store from './store';
 import { Provider } from 'react-redux';
 
 class App extends Component {
-  constructor(){
-    super()
-    this.state = {
-      cartItems: [],
-    }
-  }
-
-  createOrder = (order) => {
-    alert("Need to save order for" + order.name)
-  }
-
-  removeFromCart = (product) => {
-    const cartItems = Array.from(this.state.cartItems);
-    this.setState(
-      { cartItems: cartItems.filter(item => item.id !== product.id) }
-    );
-  }
-
-  addToCart = (product) => {
-    const cartItems = Array.from(this.state.cartItems);
-    let alreadyInCart = false;
-    cartItems.forEach(item => {
-      if(item.id === product.id) {
-        item.count++;
-        alreadyInCart = true;
-      }
-    });
-    if(!alreadyInCart){
-      cartItems.push({ ...product, count: 1})
-    }
-    this.setState({ cartItems });
-  }
-
   render() {
     return (
       <Provider store={store}>
@@ -52,16 +19,10 @@ class App extends Component {
             <div className="grid-container__content">
               <div className="grid-container__products">
                 <SortAndFilter/>
-                <Products
-                  addToCart={this.addToCart} 
-                />
+                <Products/>
               </div>
               <div className="grid-container__cart">
-                <Cart
-                  cartItems={this.state.cartItems}
-                  removeFromCart={this.removeFromCart}
-                  createOrder={this.createOrder}
-                />
+                <Cart/>
               </div>
             </div>
           </div>

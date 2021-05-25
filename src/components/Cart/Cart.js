@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import CheckoutForm from '../CheckoutForm/CheckoutForm';
 import { Fade } from "react-awesome-reveal";
 import './Cart.scss';
+import {connect} from 'react-redux';
+import {removeFromCart} from '../../actions/cartActions';
+// import {createOrder, clearOrder} from '../../actions/orderActions';
 
 class Cart extends Component {
     constructor(props){
@@ -94,4 +97,8 @@ class Cart extends Component {
     }
 }
 
-export default Cart;
+export default connect((state) =>({
+    cartItems: state.cart.cartItems
+}),
+    {removeFromCart}
+)(Cart);
