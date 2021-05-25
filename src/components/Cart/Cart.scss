@@ -18,7 +18,7 @@
         list-style: none;
     }
     &__pic{
-        width: 7rem;
+        width: 5rem;
         border: solid 1px #0000003b;
         border-radius: 4px;
     }
@@ -32,7 +32,7 @@
         box-shadow: -1px 1px 5px #0000003b;
         border-radius: 6px;
         padding: 1rem;
-        width: 25%;
+        width: 20%;
     }
     &__right{
         padding: 0 0.5rem;
@@ -68,6 +68,6 @@
         display: flex;
         justify-content: space-between;
         margin: 0 2rem;
-        width: 25%;
+        width: 20%;
     }
 }

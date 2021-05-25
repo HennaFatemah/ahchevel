@@ -1,20 +1,25 @@
 import React, { Component } from 'react';
 import './SortAndFilter.scss';
+import {filterProducts, sortProducts} from '../../actions/productActions';
+import {connect} from 'react-redux';
 
 class SortAndFilter extends Component {
     render() {
-        const { count, sort, category, filterProducts, sortProducts } = this.props;
+        const { sort, products, filterProducts, category, filteredProducts, sortProducts } = this.props;
         return (
+            !filteredProducts?
+                <div>Loading...</div>:
+
             <div className="sort-filter">
-                <p className="sort-filter__title sort-filter__title--count">{count} Jewelries</p>
+                <p className="sort-filter__title sort-filter__title--count">{filteredProducts.length} Jewelries</p>
                 <div className="sort-filter__sort">
                     <p className="sort-filter__title">Sort By Price</p>
                     <select 
                         value={sort} 
-                        onChange={sortProducts}
+                        onChange={(e)=>sortProducts(filteredProducts, e.target.value)}
                         className="sort-filter__select"
                     >
-                        <option>Default</option>
+                        <option value="latest">Default</option>
                         <option value="highest">Highest</option>
                         <option value="lowest">Lowest</option>
                     </select>
@@ -23,7 +28,7 @@ class SortAndFilter extends Component {
                     <p className="sort-filter__title">Filters</p>
                     <select 
                         value={category} 
-                        onChange={filterProducts}
+                        onChange={(e)=>filterProducts(products, e.target.value)}
                         className="sort-filter__select"
                     >
                         <option value="">All</option>
@@ -38,4 +43,13 @@ class SortAndFilter extends Component {
     }
 }
 
-export default SortAndFilter;
+export default connect((state) => ({
+    category: state.products.category,
+    sort: state.products.sort,
+    products: state.products.items,
+    filteredProducts: state.products.filteredItems
+}), {
+    //second parameter for mapping actions
+    filterProducts,
+    sortProducts
+})(SortAndFilter);

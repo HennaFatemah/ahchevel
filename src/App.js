@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import Logo from './assets/logo/logo.png';
 import './App.scss';
-import data from './data.json';
 import Products from './components/Products/Products';
 import SortAndFilter from './components/SortAndFilter/SortAndFilter';
 import Cart from './components/Cart/Cart';
@@ -12,10 +11,7 @@ class App extends Component {
   constructor(){
     super()
     this.state = {
-      products: data.products,
       cartItems: [],
-      category: '',
-      sort: '',
     }
   }
 
@@ -45,38 +41,6 @@ class App extends Component {
     this.setState({ cartItems });
   }
 
-  sortProducts = (e) => {
-    const sort = e.target.value;
-    this.setState({
-      sort: sort,
-      products: Array
-        .from(this.state.products)
-        .sort((a, b) => 
-          sort === 'lowest' ?
-            a.price - b.price :
-          sort === 'highest' ?
-            b.price - a.price :
-          a.id - b.id
-        )
-    })
-  }
-
-  filterProducts = (e) => {
-    const category = e.target.value;
-    this.setState(
-      category.length > 0 ?
-      {
-        category: category,
-        products: data.products.filter(filteredProducts => filteredProducts.category === category)
-      }
-      :
-      {
-        category: category,
-        products: data.products
-      }
-    )
-  }
-
   render() {
     return (
       <Provider store={store}>
@@ -87,15 +51,8 @@ class App extends Component {
           <div className="grid-container__main">
             <div className="grid-container__content">
               <div className="grid-container__products">
-                <SortAndFilter
-                  count={this.state.products.length}
-                  sort={this.state.sort}
-                  category={this.state.category}
-                  filterProducts={this.filterProducts}
-                  sortProducts={this.sortProducts}
-                />
+                <SortAndFilter/>
                 <Products
-                  products={this.state.products}
                   addToCart={this.addToCart} 
                 />
               </div>
