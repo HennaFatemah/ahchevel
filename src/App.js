@@ -12,13 +12,13 @@ class App extends Component {
     return (
       <Provider store={store}>
         <BrowserRouter>
+          <Link to="/admin" className="grid-container__admin">Admin</Link>
           <div className="grid-container">
             <div className="grid-container__head">
               <Link to="/" className="grid-container__logo"><img className="grid-container__logo-pic" src={Logo} alt="" /></Link>
             </div>
             <div className="grid-container__main">
-              <Link to="/admin" className="grid-container__admin">Admin</Link>
-            <Route path="/admin" component={Admin}/>
+              <Route path="/admin" component={Admin}/>
               <Route path="/" component={HomeScreen} exact/>
             </div>
             <div className="grid-container__foot">

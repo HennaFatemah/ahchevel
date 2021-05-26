@@ -30,11 +30,12 @@
     &__admin{
         position: absolute;
         top: 2.5rem;
-        right: 0;
-        display: flex;
+        left: 0;
+        margin-left: 2rem;
+        // display: flex;
         z-index: 200;
-        width: 100vw;
-        justify-content: flex-end;
+        //width: 100vw;
+        //justify-content: flex-end;
         color: white;
         text-decoration: none;
         cursor: pointer;
