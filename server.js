@@ -6,7 +6,12 @@ const app = express();
 app.use(express.urlencoded({extended: false}));
 app.use(express.json());
 
-mongoose.connect("mongodb://localhost/ahchevel-jewelry-db", {
+app.use("/", express.static(__dirname + "/build"));
+
+app.get("/", (req, res) => res.sendFile(__dirname + "/build/index.html"));
+
+mongoose.connect(
+    process.env.MONGODB_URL || "mongodb://localhost/ahchevel-jewelry-db", {
     useNewUrlParser: true,
     useCreateIndex: true,
     useUnifiedTopology: true,
