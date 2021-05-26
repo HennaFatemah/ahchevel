@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Logo from './assets/logo/logo.png';
+import Logo from './assets/logo/logo.svg';
 import './App.scss';
 import store from './store';
 import { Provider } from 'react-redux';
