@@ -27,9 +27,10 @@
         top: 0;
     }
     &__admin{
-        position: absolute;
+        position: fixed;
         top: 2.5rem;
-        right: 2.5rem;
+        right: 0;
+        margin-right: 2rem;
         display: flex;
         z-index: 200;
         width: 100vw;
