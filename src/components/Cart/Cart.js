@@ -4,7 +4,8 @@ import { Fade } from "react-awesome-reveal";
 import './Cart.scss';
 import {connect} from 'react-redux';
 import {removeFromCart} from '../../actions/cartActions';
-// import {createOrder, clearOrder} from '../../actions/orderActions';
+import {createOrder, clearOrder} from '../../actions/orderActions';
+import OrderDetails from '../OrderDetails/OrderDetails';
 
 class Cart extends Component {
     constructor(props){
@@ -40,12 +41,17 @@ class Cart extends Component {
             name: this.state.name,
             address: this.state.address,
             cartItems: this.props.cartItems,
+            total:this.props.cartItems.reduce((a, c)=> a + c.price * c.count, 0)
         }
         this.props.createOrder(order)
     }
 
+    closeWindow = () => {
+        this.props.clearOrder();
+    }
+
     render() {
-        const { cartItems, removeFromCart } = this.props;
+        const { cartItems, removeFromCart, order } = this.props;
         return (
             <div className="cart">
                 <div className="cart__items">
@@ -54,6 +60,13 @@ class Cart extends Component {
                         cartItems.length === 1 ? 
                         <div className="cart__head">You have {cartItems.length} item in the cart</div> :
                         <div className="cart__head">You have {cartItems.length} items in the cart</div>
+                    }
+                    {
+                        order && 
+                        <OrderDetails
+                            order={order}
+                            closeWindow={this.closeWindow}
+                        />
                     }
                 </div>
                 <Fade direction="left">
@@ -98,7 +111,8 @@ class Cart extends Component {
 }
 
 export default connect((state) =>({
+    order: state.order.order,
     cartItems: state.cart.cartItems
 }),
-    {removeFromCart}
+    {removeFromCart, createOrder, clearOrder}
 )(Cart);
